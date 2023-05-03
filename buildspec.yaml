@@ -8,5 +8,4 @@ phases:
       - npm ci
       - npm i -g cdk
       - pwd
-      - cdk synth
       - cdk deploy --require-approval=never
