@@ -4,6 +4,8 @@ phases:
   build:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
+      - pwd
       - npm ci
+      - pwd
       - cdk synth
       - cdk deploy
