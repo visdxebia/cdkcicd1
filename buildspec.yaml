@@ -9,3 +9,4 @@ phases:
       - npm i -g cdk
       - pwd
       - cdk deploy --require-approval=never
+      - cat cdk.context.json
