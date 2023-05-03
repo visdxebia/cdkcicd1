@@ -4,8 +4,6 @@ phases:
   build:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
-      - echo $ENV_VAR_1
-      - echo $ENV_VAR_2
       - pwd
       - npm ci
       - npm i -g cdk
