@@ -8,5 +8,6 @@ const fs = require('fs');
     AttributesToGet: ["id","host"]
   }));
 
+  console.log("Got data, wrting", JSON.stringify(Items, null, 2))
   fs.writeFileSync('./bin/data.json', JSON.stringify(Items, null, 2));
 })();
