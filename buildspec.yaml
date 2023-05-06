@@ -9,5 +9,6 @@ phases:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
       - npm ci
+      - node getSomething.js
       - npm i -g cdk
-      - cdk deploy --require-approval=never
+      - cdk deploy --all --require-approval=never
