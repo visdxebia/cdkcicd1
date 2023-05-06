@@ -1,12 +1,14 @@
 version: 0.2
 
+env:
+  parameter-store:
+    clientToOnboardConfig: "clientToOnboardConfig"
+
 phases:
   build:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
-      - pwd
       - npm ci
       - npm i -g cdk
-      - pwd
       - cdk deploy --require-approval=never
       - cat cdk.context.json
