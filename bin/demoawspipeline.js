@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const path = require('path');
 const cdk = require('aws-cdk-lib');
 const { DemoawspipelineStack } = require('../lib/demoawspipeline-stack');
-const fileContents = fs.readFileSync('./data.json', "utf-8")
+const fileContents = fs.readFileSync(path.join(__dirname, ), "utf-8")
 const inputData = JSON.parse(fileContents);
 
 const app = new cdk.App();
